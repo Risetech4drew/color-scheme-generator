@@ -1,0 +1,23 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+.container {
+  width: 100%;
+}
+.top-options-section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+  background: #fff;
+  box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+}
