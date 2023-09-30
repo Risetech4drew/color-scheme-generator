@@ -8,6 +8,10 @@ body {
   padding: 0;
   font-family: "Inter", sans-serif;
 }
+input[type="color"] {
+  width: 61px;
+  height: 42px;
+}
 select {
   padding: 0.25em 0.375em;
   border-radius: 6px;
@@ -15,9 +19,18 @@ select {
   background: var(--white, #fff);
   /* shadow/sm */
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
+  font-size: 16px;
+}
+select,
+button {
+  font-family: inherit;
 }
 button {
   padding: 0.375em 0.3125em;
+  border: none;
+  border-radius: 4px;
+  border: 1px solid var(--gray-300, #d1d5db);
+  background: #fff;
 }
 .top-options-section {
   width: 100%;
@@ -25,37 +38,64 @@ button {
   justify-content: space-between;
   align-items: center;
   gap: 0.3125em;
-  margin-top: 10px;
   background: #fff;
   box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.15);
   padding: 0.625em;
 }
+
 .schemes-container {
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  position: relative;
 }
 /* .scheme-values-container {
   justify-content: space-around;
 } */
 .scheme {
   width: 100%;
-  height: 100px;
+  height: 150px;
 }
 img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.scheme-values-container {
-  width: 90%;
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  align-items: center;
-  position: absolute;
-  top: 70px;
-}
 .color-hex-value {
+}
+/* media queries */
+@media (max-width: 670px) {
+  .schemes-container {
+    position: relative;
+  }
+  .scheme-values-container {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    align-items: center;
+    position: absolute;
+    top: 100px;
+  }
+}
+@media (min-width: 670px) {
+  .schemes-container {
+    flex-direction: row;
+  }
+  .scheme {
+    width: 300px;
+    height: 100%;
+  }
+  .scheme-values-container {
+    display: flex;
+    justify-content: space-around;
+    background: #fff;
+    box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.15);
+  }
+  select {
+    padding: 9px 13px;
+  }
+  button {
+    padding: 13px 11px;
+  }
 }
