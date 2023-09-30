@@ -11,10 +11,7 @@ body {
 .color-scheme-container {
   height: 100vh;
 }
-input[type="color"] {
-  width: 61px;
-  height: 42px;
-}
+
 select {
   padding: 0.25em 0.375em;
   border-radius: 6px;
@@ -22,7 +19,6 @@ select {
   background: var(--white, #fff);
   /* shadow/sm */
   box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.05);
-  font-size: 16px;
 }
 select,
 button {
@@ -99,8 +95,13 @@ img {
     background: #fff;
     box-shadow: 0px 4px 11px 0px rgba(0, 0, 0, 0.15);
   }
+  input[type="color"] {
+    width: 61px;
+    height: 42px;
+  }
   select {
     padding: 9px 13px;
+    font-size: 16px;
   }
   button {
     padding: 13px 11px;
