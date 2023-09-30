@@ -15,20 +15,24 @@
     <title>Color scheme generator</title>
   </head>
   <body>
-    <div class="container">
+    <div class="color-scheme-container">
       <div class="top-options-section">
         <input type="color" name="seed-color" id="seed-color" />
-        <select name="color-scheme" id="color-scheme">
-          <option value="1">Monochrome</option>
-          <option value="1">Monochrome dark</option>
-          <option value="1">Monochrome light</option>
-          <option value="1">Analogic</option>
-          <option value="1">Complement</option>
-          <option value="1">Analogic-complement</option>
-          <option value="1">Triad</option>
+        <select name="color-scheme" id="color-scheme-options">
+          <option value="">(select color scheme)</option>
+          <option value="monochrome">Monochrome</option>
+          <option value="monochrome-dark">Monochrome-dark</option>
+          <option value="monochrome-light">Monochrome-light</option>
+          <option value="analogic">Analogic</option>
+          <option value="complement">Complement</option>
+          <option value="analogic-complement">Analogic-complement</option>
+          <option value="triad">Triad</option>
         </select>
         <button id="get-color-scheme-btn">Get color scheme</button>
       </div>
+      <div class="schemes-container" id="schemes-container"></div>
+      <div class="scheme-values-container" id="scheme-values"></div>
     </div>
+    <script src="index.js"></script>
   </body>
 </html>
